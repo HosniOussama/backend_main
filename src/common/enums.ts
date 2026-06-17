@@ -1,0 +1,14 @@
+export enum ERole {
+  ADMIN = 'ADMIN',
+  OFFICER = 'OFFICER',
+  STUDENT = 'STUDENT',
+}
+
+export enum ERequestStatus {
+  DRAFT = 'DRAFT',
+  CANCELED = 'CANCELED',
+  PENDING = 'PENDING',
+  APPROVED = 'APPROVED',
+  REJECTED = 'REJECTED',
+  COMPLETED = 'COMPLETED',
+}

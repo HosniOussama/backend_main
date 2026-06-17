@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DocPlus - New Request</title>
+    <style>
+        body {
+            font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.7;
+            color: #1a2b3c;
+            background-color: #f5f7fa;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 48px 32px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .logo {
+            width: 180px;
+            height: auto;
+            margin-bottom: 24px;
+        }
+        .title {
+            color: #0f4c81;
+            font-size: 28px;
+            margin-bottom: 24px;
+            font-weight: 600;
+        }
+        .button {
+            display: inline-block;
+            padding: 14px 36px;
+            background-color: #0f4c81;
+            color: white !important;
+            text-decoration: none;
+            border-radius: 8px;
+            margin: 32px 0;
+            font-weight: 600;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(15, 76, 129, 0.2);
+        }
+        .button:hover {
+            background-color: #0d3d68;
+            transform: translateY(-1px);
+        }
+        .info-box {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-left: 4px solid #0f4c81;
+            border-radius: 8px;
+            margin: 24px 0;
+            font-size: 15px;
+            color: #445668;
+        }
+        .info-item {
+            margin: 12px 0;
+            padding: 8px 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .info-item:last-child {
+            border-bottom: none;
+        }
+        .info-label {
+            font-weight: 600;
+            color: #0f4c81;
+            display: inline-block;
+            min-width: 140px;
+        }
+        .info-value {
+            color: #1a2b3c;
+        }
+        .footer {
+            margin-top: 40px;
+            padding-top: 24px;
+            border-top: 1px solid #edf2f7;
+            font-size: 13px;
+            color: #64748b;
+            text-align: center;
+            line-height: 1.6;
+        }
+        .highlight {
+            color: #0f4c81;
+            font-weight: 600;
+        }
+        .status-badge {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 600;
+            background-color: #dbeafe;
+            color: #1e40af;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <!-- <img src="logo-url" alt="DocPlus" class="logo"> -->
+            <h1 class="title">New Request Created</h1>
+        </div>
+        <div class="info-box">
+            <strong>
+                {{#if validatorName}}
+                    <p>Dear {{validatorName}},</p>
+                {{else}}
+                    <p>Dear Validator,</p>
+                {{/if}}
+            </strong>
+            <p>A new request has been created and requires your validation.</p>
+            
+            <div class="info-item">
+                <span class="info-label">Reference:</span>
+                <span class="info-value">{{reference}}</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Title:</span>
+                <span class="info-value">{{title}}</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Requester:</span>
+                <span class="info-value">{{demandeurName}}</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Request Type:</span>
+                <span class="info-value">{{requestTypeName}}</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Status:</span>
+                <span class="status-badge">Pending</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Creation Date:</span>
+                <span class="info-value">{{createdAt}}</span>
+            </div>
+        </div>
+        <div style="text-align: center;">
+            <a href="{{requestUrl}}" class="button">View Request</a>
+        </div>
+        <div class="footer">
+            <p>This is an automated message - please do not reply to this email.</p>
+            <p>© DocPlus. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html> 

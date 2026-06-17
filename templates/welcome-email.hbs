@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DocPlus - Welcome</title>
+    <style>
+        body {
+            font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.7;
+            color: #1a2b3c;
+            background-color: #f5f7fa;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 48px 32px;
+            background-color: #f8f9fa;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .logo {
+            width: 180px;
+            height: auto;
+            margin-bottom: 24px;
+        }
+        .title {
+            color: #0f4c81;
+            font-size: 28px;
+            margin-bottom: 24px;
+            font-weight: 600;
+        }
+        .button {
+            display: inline-block;
+            padding: 14px 36px;
+            background-color: #0f4c81;
+            color: white !important;
+            text-decoration: none;
+            border-radius: 8px;
+            margin: 32px 0;
+            font-weight: 600;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(15, 76, 129, 0.2);
+        }
+        .button:hover {
+            background-color: #0d3d68;
+            transform: translateY(-1px);
+        }
+        .security-notice {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-left: 4px solid #0f4c81;
+            border-radius: 8px;
+            margin: 24px 0;
+            font-size: 15px;
+            color: #445668;
+        }
+        .footer {
+            margin-top: 40px;
+            padding-top: 24px;
+            border-top: 1px solid #edf2f7;
+            font-size: 13px;
+            color: #64748b;
+            text-align: center;
+            line-height: 1.6;
+        }
+        .highlight {
+            color: #0f4c81;
+            font-weight: 600;
+        }
+        .url-text {
+            word-break: break-all;
+            color: #0f4c81;
+            font-size: 14px;
+            background-color: #f8f9fa;
+            padding: 12px;
+            border-radius: 6px;
+            margin: 16px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <!-- <img src="logo-url" alt="MedPlatform" class="logo"> -->
+            <h1 class="title">Welcome to DocPlus</h1>
+        </div>
+        <div class="security-notice">
+            <strong>
+                {{#if fullname}}
+                    <p>Dear {{fullname}},</p>
+                {{else}}
+                    <p>Dear Client,</p>
+                {{/if}}
+            </strong>
+            <p>Welcome to DocPlus. To start using our services, click the button below.</p>
+        </div>
+        <div style="text-align: center;">
+            <a href="{{url}}" class="button">Sign In</a>
+        </div>
+        <div class="footer">
+            {{!-- <p>Ce lien expirera dans {{expirationHours}} heures</p> --}}
+            <p>This is an automated message - please do not reply to this email.</p>
+            <p>© DocPlus. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html> 
