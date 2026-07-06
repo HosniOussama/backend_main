@@ -12,6 +12,7 @@ import { MailingModule } from './mailing/mailing.module';
 import { RequestTypeModule } from './request-type/request-type.module';
 import { RequestModule } from './request/request.module';
 import { UploadModule } from './upload/upload.module';
+import { AssistantModule } from './assistant/assistant.module';
 
 @Module({
   imports: [
@@ -22,6 +23,7 @@ import { UploadModule } from './upload/upload.module';
     RequestModule,
     MailingModule,
     UploadModule,
+    AssistantModule,
     ConfigModule.forRoot({
       isGlobal: true,
       envFilePath: './.env',

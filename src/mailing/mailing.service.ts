@@ -116,7 +116,7 @@ export class MailingService {
           url: this.configService.get<string>('FRONTEND_URL') + 'signin',
         },
         to: email,
-        subject: 'Welcome to DocPlus',
+        subject: 'Welcome to FormPlatform',
       });
       return true;
     } catch (error) {
@@ -140,7 +140,7 @@ export class MailingService {
           expirationMinutes,
         },
         to: email,
-        subject: 'Verification Code - DocPlus',
+        subject: 'Verification Code - FormPlatform',
       });
       return true;
     } catch (error) {
